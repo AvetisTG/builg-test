@@ -8,11 +8,6 @@ const selectedItemsSlice= createSlice({
     frameColor: '',
   },
   reducers:{
-    resetSelections: (state) => {
-      state.frameMaterial = '';
-      state.glassType = '';
-      state.frameColor = '';
-    },
     selectFrameMaterial: (state, action) => {
       state.frameMaterial = action.payload;
     },
@@ -21,6 +16,11 @@ const selectedItemsSlice= createSlice({
     },
     selectFrameColor: (state, action) => {
       state.frameColor = action.payload;
+    },
+    resetSelections: (state) => {
+      state.frameMaterial = '';
+      state.glassType = '';
+      state.frameColor = '';
     },
   }
 })
